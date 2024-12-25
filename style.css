@@ -1,0 +1,398 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+:root {
+    --pri: #c1520f;
+    --middark: #9b4109;
+    --dark: #803405;
+    --gray: rgb(136, 135, 135);
+    --black: #000000;
+    --lblack: #333;
+    --white: #fff;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #FFFDFB;
+    overflow-x: hidden;
+}
+
+/* **************************** Navbar Styling Start ****************************** */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.3%;
+    background-color: #fff;
+}
+
+.navbar .navbarLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #c1520f;
+}
+
+.navLinks .resLogo {
+    display: none;
+}
+
+.navbar .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar .navLinks a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+    font-weight: 600;
+    padding: 25px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar .navLinks a:hover {
+    color: var(--primary);
+}
+
+/* **************************** Navbar dropdown Styling ****************************** */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid var(--middark);
+    list-style: none;
+    min-width: 200px;
+    padding: 8px 0;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.navbar .dropdownMenu li {
+    padding: 10px 15px;
+}
+
+.navbar .dropdownMenu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+    transition: color 0.3s ease;
+    padding: 0;
+}
+
+.navbar .navLinks a:hover {
+    color: var(--pri);
+}
+
+.navbar .dropdownMenu li:hover a {
+    color: #c1520f;
+}
+
+.navbar .dropdown:hover .dropdownMenu {
+    display: block;
+}
+
+/* **************************** Navbar Btn Styling ****************************** */
+.navbar .navButtons {
+    display: flex;
+    gap: 15px;
+}
+
+/* **************************** navBtn Styling ****************************** */
+.navbar .navBtn {
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 1.1em;
+    border: 1px solid #a2400c;
+    color: #a2400c;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+
+.navbar .navBtn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .navBtn i.close {
+    display: none;
+}
+
+.navbar.active .navBtn i.close {
+    display: block;
+}
+
+.navbar.active .navBtn i.menu {
+    display: none;
+}
+
+/* **************************** Navbar Styling End ****************************** */
+
+/* **************************** Main Container Start ****************************** */
+.main {
+    display: block;
+    padding: 0 3.3%;
+}
+
+/* **************** Hero Section Start ******************* */
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heroSection figure #heroVideo {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    border-radius: 25px;
+    pointer-events: none;
+}
+
+#youtubeVideo:hover {
+    pointer-events: auto;
+}
+
+.heroSection .detailsHero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    flex: 1 1 50%;
+}
+
+.heroSection .detailsHero h1 {
+    font-size: 4em;
+    line-height: 96%;
+    padding: 0 0 8px;
+    font-weight: 900;
+    max-width: 80%;
+}
+
+.heroSection .detailsHero h1 span {
+    color: var(--pri);
+}
+
+.heroSection .detailsHero p {
+    font-size: 1.2em;
+    max-width: 65%;
+    color: var(--lblack);
+}
+
+.heroSection .detailsBtns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex: 1 1 40%;
+    width: 100%;
+}
+
+/* **************** Hero Section End ******************* */
+
+/* **************************** Main Container Start ****************************** */
+
+
+/* **************************** Media Query Start ****************************** */
+/* ********** Media Query 1046px *********** */
+@media screen and (max-width: 1046px) {
+    /* ----------------- navbar section start ---------------- */
+    .navbar .navButtons .btn.darkBtn {
+        display: none;
+    }
+    /* ----------------- navbar section end ---------------- */
+
+    /* ----------------- hero section start ---------------- */
+    .heroSection .detailsHero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .heroSection .detailsBtns {
+        justify-content: flex-start;
+    }
+    /* ----------------- hero section end ---------------- */
+}
+
+/* ********** Media Query 848px *********** */
+@media screen and (max-width: 906px) {
+    body {
+        font-size: 93%;
+    }
+
+    /* ----------------- navbar section start ---------------- */
+    .navbar .navButtons {
+        display: none;
+    }
+
+    .navbar .navbarLeft {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    /* ----------------- navbar section end ---------------- */
+
+    /* ----------------- hero section start ---------------- */
+    .heroSection .detailsHero h1,
+    .heroSection .detailsHero p {
+        max-width: 95%;
+    }
+    /* ----------------- hero section end ---------------- */
+}
+
+/* ********** Media Query 675px *********** */
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 90%;
+    }
+
+    /* ----------------- navbar section start ---------------- */
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .navbar .navLinks {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        background: #fff;
+        gap: 0;
+        overflow-y: scroll;
+        transform: translateX(-200%);
+        transition: all .3s ease-in-out;
+    }
+
+    .navbar.active .navLinks {
+        transform: translateX(0);
+    }
+
+    .navbar .navLinks .resLogo {
+        display: block;
+    }
+
+    .navbar>.logo {
+        opacity: 1;
+        transition: .3s ease-in-out;
+    }
+
+    .navbar.active>.logo {
+        opacity: 0;
+    }
+
+    .navbar .navLinks>li {
+        width: 100%;
+        border-bottom: 1px solid #fbe4d48f;
+    }
+
+    .navbar .navLinks>li:last-child {
+        border: none;
+    }
+
+    .navbar .navLinks a {
+        padding: 10px 0;
+    }
+
+    .navbar .navLinks .dropdown a.dropBtn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar .navLinks .dropdown .dropdownMenu {
+        width: 100%;
+        position: relative;
+        top: 0;
+        border: none;
+        background: #fbe4d48f;
+    }
+
+    .navbar .navLinks .dropdown .dropdownMenu li {
+        padding: 0 20px;
+    }
+
+    .navbar .navLinks .resNavHeader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 25px;
+    }
+
+    .navbar .navBtn {
+        display: flex;
+    }
+    /* ----------------- navbar section end ---------------- */
+
+    /* ----------------- hero section start ---------------- */
+    .heroSection figure #heroVideo {
+        height: 45vh;
+    }
+
+    .heroSection .detailsHero h1 {
+        font-size: 3em;
+    }
+
+    .heroSection .detailsHero p {
+        font-size: .98em;
+    }
+    /* ----------------- hero section end ---------------- */
+}
+
+@media screen and (max-width: 424px) {
+    body {
+        font-size: 75%;
+    }
+
+    /* ----------------- hero section start ---------------- */
+    .heroSection figure #heroVideo {
+        height: 37vh;
+    }
+
+    .heroSection .detailsHero h1 {
+        font-size: 2.4em;
+    }
+
+    .heroSection .detailsHero h1,
+    .heroSection .detailsHero p {
+        max-width: 100%;
+    }
+    /* ----------------- hero section end ---------------- */
+}
+
+/* **************************** Media Query End ****************************** */

@@ -1,0 +1,37 @@
+.btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+
+.lightBtn {
+    background-color: #fdf2e9;
+    color: #c1520f;
+}
+
+.lightBtn:hover {
+    background-color: #fbe4d4;
+}
+
+.darkBtn {
+    background-color: #c1520f;
+    color: #fff;
+}
+
+.darkBtn:hover {
+    background-color: #a2400c;
+}
+
+.borderBtn {
+    background: transparent;
+    border: 1px solid var(--middark);
+    color: var(--middark);
+}
+
+.borderBtn:hover {
+    background-color: #fdf2e9;
+    color: #c1520f;
+}
