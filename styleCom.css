@@ -1,3 +1,4 @@
+/* btns components */
 .btn {
     padding: 8px 20px;
     border-radius: 20px;
@@ -34,4 +35,30 @@
 .borderBtn:hover {
     background-color: #fdf2e9;
     color: #c1520f;
+}
+
+/* title components */
+.headTitle {
+    position: relative;
+}
+
+.headTitle h3 {
+    font-size: 2.4em;
+    max-width: 75%;
+    line-height: 95%;
+    z-index: 1;
+}
+
+.headTitle h3 span {
+    color: var(--pri);
+}
+
+.headTitle .liTitle {
+    font-size: 2.7em;
+    font-weight: 800;
+    color: #c1530f2f;
+    position: absolute;
+    top: -27px;
+    left: 0;
+    z-index: -1;
 }
