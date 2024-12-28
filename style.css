@@ -9,7 +9,7 @@
     --pri: #c1520f;
     --middark: #9b4109;
     --dark: #803405;
-    --gray: rgb(136, 135, 135);
+    --gray: rgba(136, 135, 135, 0.651);
     --black: #000000;
     --lblack: #333;
     --white: #fff;
@@ -25,7 +25,7 @@ body {
     overflow-x: hidden;
 }
 
-/* **************************** Navbar Styling Start ****************************** */
+/* Navbar Styling Start ****************************** */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -72,7 +72,7 @@ body {
     color: var(--primary);
 }
 
-/* **************************** Navbar dropdown Styling ****************************** */
+/* Navbar dropdown Styling ****************************** */
 .navbar .dropdown {
     position: relative;
 }
@@ -116,53 +116,61 @@ body {
     display: block;
 }
 
-/* **************************** Navbar Btn Styling ****************************** */
+/* Navbar Btn Styling ****************************** */
 .navbar .navButtons {
     display: flex;
     gap: 15px;
 }
 
-/* **************************** navBtn Styling ****************************** */
-.navbar .navBtn {
+/* navBtn Styling ****************************** */
+.navbar .humberger {
+    width: 35px;
+    height: 35px;
+    display: none;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-    font-size: 1.1em;
-    border: 1px solid #a2400c;
-    color: #a2400c;
-    border-radius: 10px;
+    flex-direction: column;
     cursor: pointer;
-    display: none;
-    z-index: 9999;
+    transition: .3s ease-in-out;
 }
 
-.navbar .navBtn i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navbar.active .humberger {
+    transform: rotate(360deg);
 }
 
-.navbar .navBtn i.close {
-    display: none;
+.navbar .humberger span {
+    width: 70%;
+    height: 1px;
+    background: var(--dark);
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
 }
 
-.navbar.active .navBtn i.close {
-    display: block;
+.navbar .humberger span.line1 {
+    transform: translateY(-3px);
 }
 
-.navbar.active .navBtn i.menu {
-    display: none;
+.navbar.active .humberger span.line1 {
+    transform: translateY(0px) rotate(-45deg);
 }
 
-/* **************************** Navbar Styling End ****************************** */
+.navbar .humberger span.line2 {
+    transform: translateY(3px);
+}
 
-/* **************************** Main Container Start ****************************** */
+.navbar.active .humberger span.line2 {
+    transform: translateY(0px) rotate(45deg);
+}
+
+/* Navbar Styling End ****************************** */
+
+/* Main Styling Start ****************************** */
 .main {
     display: block;
     padding: 0 3.3%;
 }
 
-/* **************** Hero Section Start ******************* */
+/* Hero Styling Start ******************* */
 .heroSection {
     display: flex;
     flex-direction: column;
@@ -171,7 +179,7 @@ body {
 
 .heroSection figure #heroVideo {
     width: 100%;
-    height: 55vh;
+    height: 65vh;
     object-fit: cover;
     border-radius: 25px;
     pointer-events: none;
@@ -217,18 +225,186 @@ body {
     width: 100%;
 }
 
-/* **************** Hero Section End ******************* */
+/* Hero Styling End ******************* */
 
-/* **************************** Main Container Start ****************************** */
+/* counter Styling start ******************* */
+.main .counterSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 35px 0;
+}
+
+.main .counterSection .counterMain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    width: 100%;
+    padding: 30px 15px;
+    background: var(--pri);
+    border-radius: 8px;
+    position: relative;
+}
+
+.main .counterSection .counterMain .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 200px;
+    width: 100%;
+    color: var(--white);
+    gap: 3px;
+    padding: 5px;
+    text-align: center;
+}
+
+.main .counterSection .counterMain .counter h1 {
+    font-size: 3em;
+}
+
+.main .counterSection .counterMain .counter p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* counter Styling End ******************* */
+
+/* courses Styling start ******************* */
+.coursesSection {
+    display: block;
+    position: relative;
+    padding: 0 0 25px;
+}
+
+/* courses header styling */
+.coursesSection .coursesHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 15px 0 30px;
+}
+
+/* courses box styling */
+.cdBoxes {
+    cursor: pointer;
+}
+
+.cdBoxes {
+    width: 100%;
+}
+
+.cdBoxes .cdBox {
+    user-select: none;
+}
+
+.cdBoxes .cdBox {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid var(--gray);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.coursesDetails .cdBox figure {
+    width: 100%;
+    height: auto;
+}
+
+.coursesDetails .cdBox figure img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.coursesDetails .cdBox h3 {
+    font-size: 1.5em;
+    color: var(--pri);
+    font-weight: 700;
+}
+
+.coursesDetails .cdBox p {
+    color: var(--lblack);
+    font-size: .95em;
+}
+
+.coursesDetails .cdBox .cdBoxBtn {
+    padding: 10px 0;
+}
+
+/* courses Styling end ******************* */
+
+/* About Us Styling start ******************* */
+.aboutUsSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0 30px;
+}
+
+.aboutUsSection .aboutContent, 
+.aboutUsSection .aboutImage {
+    flex: 1 1 350px;
+}
+
+.aboutUsSection .aboutContent {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.aboutUsSection .aboutContent p {
+    color: var(--lblack);
+    font-size: 1.05em;
+}
+
+.aboutUsSection .aboutImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+/* About Us Styling end ******************* */
+
+/* Main Styling Start ****************************** */
 
 
-/* **************************** Media Query Start ****************************** */
-/* ********** Media Query 1046px *********** */
+/* Media Query Start ****************************** */
+/* Media Query 1016px *********** */
+@media screen and (max-width: 1016px) {
+    .aboutUsSection {
+        flex-direction:column-reverse;
+    }
+
+    .aboutUsSection .aboutImage {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .aboutUsSection .aboutImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .aboutUsSection .aboutContent {
+        padding: 20px 0 0;
+    }
+}
+
+/* Media Query 1046px *********** */
 @media screen and (max-width: 1046px) {
+
     /* ----------------- navbar section start ---------------- */
     .navbar .navButtons .btn.darkBtn {
         display: none;
     }
+
     /* ----------------- navbar section end ---------------- */
 
     /* ----------------- hero section start ---------------- */
@@ -240,10 +416,11 @@ body {
     .heroSection .detailsBtns {
         justify-content: flex-start;
     }
+
     /* ----------------- hero section end ---------------- */
 }
 
-/* ********** Media Query 848px *********** */
+/* Media Query 848px *********** */
 @media screen and (max-width: 906px) {
     body {
         font-size: 93%;
@@ -260,6 +437,7 @@ body {
         justify-content: space-between;
         width: 100%;
     }
+
     /* ----------------- navbar section end ---------------- */
 
     /* ----------------- hero section start ---------------- */
@@ -267,10 +445,22 @@ body {
     .heroSection .detailsHero p {
         max-width: 95%;
     }
+
     /* ----------------- hero section end ---------------- */
 }
 
-/* ********** Media Query 675px *********** */
+/* Media Query 768px *********** */
+@media screen and (max-width: 768px) {
+    .main .counterSection .counterMain {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main .counterSection .counterMain {
+        width: 99%;
+    }
+}
+
+/* Media Query 675px *********** */
 @media screen and (max-width: 650px) {
     body {
         font-size: 90%;
@@ -279,6 +469,7 @@ body {
     /* ----------------- navbar section start ---------------- */
     .navbar {
         padding: 10px 5%;
+        z-index: 9999;
     }
 
     .navbar .navLinks {
@@ -354,9 +545,11 @@ body {
         padding: 0 0 25px;
     }
 
-    .navbar .navBtn {
+    .navbar .humberger {
         display: flex;
+        z-index: 99999;
     }
+
     /* ----------------- navbar section end ---------------- */
 
     /* ----------------- hero section start ---------------- */
@@ -371,9 +564,11 @@ body {
     .heroSection .detailsHero p {
         font-size: .98em;
     }
+
     /* ----------------- hero section end ---------------- */
 }
 
+/* Media Query 424px *********** */
 @media screen and (max-width: 424px) {
     body {
         font-size: 75%;
@@ -392,7 +587,8 @@ body {
     .heroSection .detailsHero p {
         max-width: 100%;
     }
+
     /* ----------------- hero section end ---------------- */
 }
 
-/* **************************** Media Query End ****************************** */
+/* Media Query End ****************************** */
