@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleCom.css">
     <title>Imperial Tutorial</title>
@@ -25,9 +26,9 @@
                 <figure class="logo">
                     LOGO
                 </figure>
-                <div class="navBtn">
-                    <i class="ri-menu-line menu"></i>
-                    <i class="ri-close-line close"></i>
+                <div class="humberger">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
                 </div>
                 <ul class="navLinks">
                     <div class="resNavHeader">
@@ -68,9 +69,13 @@
 
     <!-- main container start -->
     <main class="main">
+        <!-- hero section start -->
         <section class="heroSection">
             <figure>
-                <iframe id="heroVideo" width="100%" height="360" src="https://www.youtube.com/embed/mVi1cJ4p75c?si=1x8m9cuY6bXvj9az?controls=0&modestbranding=1&autoplay=1&mute=1&cc_load_policy=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="heroVideo" width="100%" height="360"
+                    src="https://www.youtube.com/embed/mVi1cJ4p75c?si=1x8m9cuY6bXvj9az?controls=0&modestbranding=1&autoplay=1&mute=1&cc_load_policy=0"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </figure>
             <div class="detailsHero">
                 <div class="detailsTxt">
@@ -84,9 +89,133 @@
                 </div>
             </div>
         </section>
+        <!-- hero section end -->
+        <!-- counter section start -->
+        <section class="counterSection">
+            <div class="counterMain">
+                <div class="counter">
+                    <h1 class="count" data-target="6000">0</h1>
+                    <p>Total Students</p>
+                </div>
+                <div class="counter">
+                    <h1 class="count" data-target="300">0</h1>
+                    <p>Total Staff</p>
+                </div>
+                <div class="counter">
+                    <h1 class="count" data-target="20">0</h1>
+                    <p>Year of Experience</p>
+                </div>
+                <div class="counter">
+                    <h1 class="count" data-target="20">0</h1>
+                    <p>Study Materials</p>
+                </div>
+            </div>
+        </section>
+        <!-- counter section end -->
+        <!-- courses section start -->
+        <section class="coursesSection">
+            <div class="coursesHeader">
+                <div class="chTxt headTitle">
+                    <span class="liTitle">Courses</span>
+                    <h3>Explore <span>Our Courses</span></h3>
+                </div>
+                <div class="chBtn">
+                    <a href="#" class="darkBtn btn">View More Courses <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="coursesDetails swiper">
+                <div class="cdBoxes swiper-wrapper">
+                    <div class="cdBox swiper-slide">
+                        <figure>
+                            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
+                                alt="">
+                        </figure>
+                        <h3>SSC (Secondary School Certificate)</h3>
+                        <p>SCC stands for Secondary School Certificate Exam for 10th Grade students in Maharashtra
+                        </p>
+                        <div class="cdBoxBtn">
+                            <a href="#" class="darkBtn btn">Enroll Now</a>
+                            <a href="#" class="lightBtn btn">Know More</a>
+                        </div>
+                    </div>
+                    <div class="cdBox swiper-slide">
+                        <figure>
+                            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
+                                alt="">
+                        </figure>
+                        <h3>SSC (Secondary School Certificate)</h3>
+                        <p>SCC stands for Secondary School Certificate Exam for 10th Grade students in Maharashtra
+                        </p>
+                        <div class="cdBoxBtn">
+                            <a href="#" class="darkBtn btn">Enroll Now</a>
+                            <a href="#" class="lightBtn btn">Know More</a>
+                        </div>
+                    </div>
+                    <div class="cdBox swiper-slide">
+                        <figure>
+                            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
+                                alt="">
+                        </figure>
+                        <h3>SSC (Secondary School Certificate)</h3>
+                        <p>SCC stands for Secondary School Certificate Exam for 10th Grade students in Maharashtra
+                        </p>
+                        <div class="cdBoxBtn">
+                            <a href="#" class="darkBtn btn">Enroll Now</a>
+                            <a href="#" class="lightBtn btn">Know More</a>
+                        </div>
+                    </div>
+                    <div class="cdBox swiper-slide">
+                        <figure>
+                            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
+                                alt="">
+                        </figure>
+                        <h3>SSC (Secondary School Certificate)</h3>
+                        <p>SCC stands for Secondary School Certificate Exam for 10th Grade students in Maharashtra
+                        </p>
+                        <div class="cdBoxBtn">
+                            <a href="#" class="darkBtn btn">Enroll Now</a>
+                            <a href="#" class="lightBtn btn">Know More</a>
+                        </div>
+                    </div>
+                    <div class="cdBox swiper-slide">
+                        <figure>
+                            <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
+                                alt="">
+                        </figure>
+                        <h3>SSC (Secondary School Certificate)</h3>
+                        <p>SCC stands for Secondary School Certificate Exam for 10th Grade students in Maharashtra
+                        </p>
+                        <div class="cdBoxBtn">
+                            <a href="#" class="darkBtn btn">Enroll Now</a>
+                            <a href="#" class="lightBtn btn">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- courses section end -->
+        <!-- about section start -->
+        <section class="aboutUsSection">
+            <div class="aboutContent">
+                <div class="chTxt headTitle">
+                    <span class="liTitle">About Us</span>
+                    <h3>Discover Our Journey to <span>Our Courses</span></h3>
+                </div>
+                <p>
+                    At <b>Imperial Tutorial</b>, our story is one of dedication, passion, and unwavering commitment to student success. From humble beginnings, we have grown into a leading coaching insitution, known for our innovative teaching methods and personalized approach to learning. Our experienced educators are devoted to nuturing each student's potentail and guiding them towards academic excellence. Join us on this journey, and let's achieve greatness together.
+                </p>
+                <a href="#" class="btn darkBtn">Know More</a>
+            </div>
+            <figure class="aboutImage">
+                <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" alt="">
+            </figure>
+        </section>
+        <!-- about section end -->
     </main>
     <!-- main container end -->
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
