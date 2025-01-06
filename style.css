@@ -245,6 +245,7 @@ body {
     background: var(--pri);
     border-radius: 8px;
     position: relative;
+    z-index: -1;
 }
 
 .main .counterSection .counterMain .counter {
@@ -491,318 +492,55 @@ body {
 
 /* Gallery Styling end ******************* */
 
+/* CTA Styling start */
+.ctaSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 0;
+    border-radius: 20px;
+    background: url(assets/cta-imperial-tutorial-govandi.png) 100% 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(-20px);
+}
+
+.ctaSection .ctaContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 0 0 20px;
+}
+
+.ctaSection .ctaContent h3 {
+    font-size: 2.7em;
+    color: var(--white);
+    max-width: 78%;
+    text-align: center;
+    line-height: 110%;
+}
+
+.ctaSection .ctaContent h3 span {
+    color: var(--pri);
+}
+
+.ctaSection .ctaContent p {
+    color: var(--white);
+    font-size: 1.1em;
+    max-width: 50%;
+    text-align: center;
+}
+
+.ctaSection .ctaBtns {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
+/* CTA Styling end */
+
 /* Main Styling Start ****************************** */
-
-
-/* Media Query Start ****************************** */
-/* Media Query 1024px *********** */
-@media (max-width: 1024px) {
-    .galleryImages .imagesSection {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .imagesSection .img1 {
-        grid-area: 1 / 1 / 2 / 3;
-    }
-
-    .imagesSection .img2 {
-        grid-area: 1 / 3 / 2 / 4;
-    }
-
-    .imagesSection .img3 {
-        grid-area: 2 / 1 / 3 / 2;
-    }
-
-    .imagesSection .img4 {
-        grid-area: 2 / 2 / 3 / 4;
-    }
-
-    .imagesSection .img5 {
-        grid-area: 3 / 1 / 4 / 2;
-    }
-
-    .imagesSection .img6 {
-        grid-area: 3 / 2 / 4 / 4;
-    }
-}
-
-/* Media Query 1016px *********** */
-@media screen and (max-width: 1016px) {
-    .aboutUsSection {
-        flex-direction: column-reverse;
-    }
-
-    .aboutUsSection .aboutImage {
-        width: 100%;
-        height: 40vh;
-    }
-
-    .aboutUsSection .aboutImage img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .aboutUsSection .aboutContent {
-        padding: 20px 0 0;
-    }
-}
-
-/* Media Query 1046px *********** */
-@media screen and (max-width: 1046px) {
-
-    /* ----------------- navbar section start ---------------- */
-    .navbar .navButtons .btn.darkBtn {
-        display: none;
-    }
-
-    /* ----------------- navbar section end ---------------- */
-
-    /* ----------------- hero section start ---------------- */
-    .heroSection .detailsHero {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .heroSection .detailsBtns {
-        justify-content: flex-start;
-    }
-
-    /* ----------------- hero section end ---------------- */
-}
-
-/* Media Query 848px *********** */
-@media screen and (max-width: 906px) {
-    body {
-        font-size: 93%;
-    }
-
-    /* ----------------- navbar section start ---------------- */
-    .navbar .navButtons {
-        display: none;
-    }
-
-    .navbar .navbarLeft {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    /* ----------------- navbar section end ---------------- */
-
-    /* ----------------- hero section start ---------------- */
-    .heroSection .detailsHero h1,
-    .heroSection .detailsHero p {
-        max-width: 95%;
-    }
-
-    /* ----------------- hero section end ---------------- */
-}
-
-/* Media Query 768px *********** */
-@media screen and (max-width: 768px) {
-    .main .counterSection .counterMain {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .main .counterSection .counterMain {
-        width: 99%;
-    }
-
-    .galleryImages .imagesSection {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .imagesSection .img1 {
-        grid-area: 1 / 1 / 2 / 3;
-    }
-
-    .imagesSection .img2 {
-        grid-area: 2 / 1 / 3 / 2;
-    }
-
-    .imagesSection .img3 {
-        grid-area: 2 / 2 / 3 / 3;
-    }
-
-    .imagesSection .img4 {
-        grid-area: 3 / 1 / 4 / 2;
-    }
-
-    .imagesSection .img5 {
-        grid-area: 3 / 2 / 4 / 3;
-    }
-
-    .imagesSection .img6 {
-        grid-area: 4 / 1 / 5 / 3;
-    }
-}
-
-/* Media Query 700px *********** */
-@media screen and (max-width: 700px) {
-    .highlightSection .slideImage {
-        height: 50vh;
-    }
-}
-
-/* Media Query 675px *********** */
-@media screen and (max-width: 650px) {
-    body {
-        font-size: 90%;
-    }
-
-    /* ----------------- navbar section start ---------------- */
-    .navbar {
-        padding: 10px 5%;
-        z-index: 9999;
-    }
-
-    .navbar .navLinks {
-        position: absolute;
-        top: 0;
-        right: 0;
-        max-width: 100%;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        background: #fff;
-        gap: 0;
-        overflow-y: scroll;
-        transform: translateX(-200%);
-        transition: all .3s ease-in-out;
-    }
-
-    .navbar.active .navLinks {
-        transform: translateX(0);
-    }
-
-    .navbar .navLinks .resLogo {
-        display: block;
-    }
-
-    .navbar>.logo {
-        opacity: 1;
-        transition: .3s ease-in-out;
-    }
-
-    .navbar.active>.logo {
-        opacity: 0;
-    }
-
-    .navbar .navLinks>li {
-        width: 100%;
-        border-bottom: 1px solid #fbe4d48f;
-    }
-
-    .navbar .navLinks>li:last-child {
-        border: none;
-    }
-
-    .navbar .navLinks a {
-        padding: 10px 0;
-    }
-
-    .navbar .navLinks .dropdown a.dropBtn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .navbar .navLinks .dropdown .dropdownMenu {
-        width: 100%;
-        position: relative;
-        top: 0;
-        border: none;
-        background: #fbe4d48f;
-    }
-
-    .navbar .navLinks .dropdown .dropdownMenu li {
-        padding: 0 20px;
-    }
-
-    .navbar .navLinks .resNavHeader {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 0 25px;
-    }
-
-    .navbar .humberger {
-        display: flex;
-        z-index: 99999;
-    }
-
-    /* ----------------- navbar section end ---------------- */
-
-    /* ----------------- hero section start ---------------- */
-    .heroSection figure #heroVideo {
-        height: 45vh;
-    }
-
-    .heroSection .detailsHero h1 {
-        font-size: 3em;
-    }
-
-    .heroSection .detailsHero p {
-        font-size: .98em;
-    }
-
-    /* ----------------- hero section end ---------------- */
-}
-
-/* Media Query 480px *********** */
-@media screen and (max-width: 480px) {
-    .galleryImages .imagesSection {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 10px;
-    }
-
-    .imagesSection .imgGal {
-        max-height: 300px;
-    }
-
-    .imagesSection .img1,
-    .imagesSection .img2,
-    .imagesSection .img3,
-    .imagesSection .img4,
-    .imagesSection .img5,
-    .imagesSection .img6 {
-        grid-area: auto;
-    }
-
-    .highlightSection .slideImage {
-        height: 38vh;
-    }
-}
-
-/* Media Query 424px *********** */
-@media screen and (max-width: 424px) {
-    body {
-        font-size: 75%;
-    }
-
-    /* ----------------- hero section start ---------------- */
-    .heroSection figure #heroVideo {
-        height: 37vh;
-    }
-
-    .heroSection .detailsHero h1 {
-        font-size: 2.4em;
-    }
-
-    .heroSection .detailsHero h1,
-    .heroSection .detailsHero p {
-        max-width: 100%;
-    }
-
-    /* ----------------- hero section end ---------------- */
-}
-
-/* Media Query End ****************************** */
