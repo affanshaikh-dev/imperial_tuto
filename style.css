@@ -595,3 +595,130 @@ body {
 
 /* Testimonial Styling end ************************** */
 /* Main Styling Start ****************************** */
+
+/* Footer Styling Start **************************** */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    background: rgb(19, 19, 19);
+    padding: 50px 40px 0;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+}
+
+.footer h2 {
+    font-size: 1.8em;
+    max-width: 50%;
+    text-align: center;
+    color: var(--white);
+}
+
+.footer form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer form .input {
+    max-width: 25%;
+    width: 100%;
+    padding: 15px 35px 15px 20px;
+    font-size: 1em;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+.footer .selectBox {
+    width: 100%;
+    max-width: 23%;
+    position: relative;
+}
+
+.footer #course_option {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    appearance: none;
+    outline: none;
+    position: relative;
+    font-size: 1em;
+    color: var(--lblack);
+}
+
+.footer .selectBox::after {
+    content: '';
+    position: absolute; 
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid var(--lblack);
+    border-bottom: 1px solid var(--lblack);
+    right: 25px;
+    top: 40%;
+    transform: rotate(313deg);
+}
+
+.footer .footBtn {
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: none;
+    max-width: 15%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.footer .credits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0 25px;
+    color: var(--white);
+}
+
+.footer .credits .socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer .credits .socialIcons a {
+    text-decoration: none;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.footer .credits .socialIcons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lblack);
+}
+
+.footer .credits .socialIcons a:hover {
+    background: var(--pri);
+}
+
+.footer .credits .socialIcons a:hover i {
+    color: var(--white);
+}
+/* Footer Styling End ****************************** */
