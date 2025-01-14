@@ -12,6 +12,7 @@
     .heroSection .detailsBtns {
         justify-content: flex-start;
     }
+
 }
 
 /* Media Query for devices with max-width of 1024px and below */
@@ -43,6 +44,14 @@
 
     .imagesSection .img6 {
         grid-area: 3 / 2 / 4 / 4;
+    }
+
+    .footer form .input {
+        max-width: 35%;
+    }
+
+    .footer .selectBox {
+        max-width: 30%;
     }
 }
 
@@ -89,6 +98,10 @@
     .heroSection .detailsHero p {
         max-width: 95%;
     }
+
+    .footer h2 {
+        max-width: 85%;
+    }
 }
 
 /* Media Query for devices with max-width of 768px and below */
@@ -132,6 +145,62 @@
 
     .ctaSection .ctaContent p {
         max-width: 65%;
+    }
+
+    .footer h2 {
+        max-width: 95%;
+    }
+
+    .footer form {
+        flex-direction: column;
+    }
+
+    .footer form .input {
+        max-width: 90%;
+    }
+
+    .footer form .selectBox {
+        max-width: 90%;
+    }
+
+    .footer form .footBtn {
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .credits .socialIcons {
+        position: fixed;
+        z-index: 999;
+        top: 35%;
+        left: 0;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .footer .credits .socialIcons a {
+        border-radius: 0;
+    }
+
+    .footer .credits .socialIcons a.facebook {
+        background: #316FF6;
+    }
+
+    .footer .credits .socialIcons a.insta {
+        background: #d62976;
+    }
+
+    .footer .credits .socialIcons a.linkedin {
+        background: #0077B5;
+    }
+
+    .footer .credits .socialIcons a.twitter {
+        background: #000;
+    }
+
+    .footer .credits .socialIcons a i {
+        color: var(--white);
     }
 }
 
@@ -257,7 +326,10 @@
 
     .ctaSection .ctaContent p {
         max-width: 95%;
-        
+    }
+
+    .footer {
+        padding: 40px 20px 0;
     }
 }
 
@@ -284,6 +356,15 @@
 
     .highlightSection .slideImage {
         height: 38vh;
+    }
+}
+
+/* Media Query for devices with max-width of 460px and below */
+@media screen and (max-width: 460px) {
+    .footer form .input,
+    .footer form .selectBox,
+    .footer form .footBtn {
+        max-width: 100%;
     }
 }
 
