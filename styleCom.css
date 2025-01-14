@@ -6,6 +6,7 @@
     text-decoration: none;
     font-weight: bold;
     transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 
 .lightBtn {
@@ -69,4 +70,9 @@
     align-items: flex-end;
     justify-content: space-between;
     gap: 15px;
+}
+
+.highText {
+    color: var(--pri);
+    font-weight: 600;
 }
