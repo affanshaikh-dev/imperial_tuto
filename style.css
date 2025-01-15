@@ -23,6 +23,7 @@ body {
 body {
     background: #FFFDFB;
     overflow-x: hidden;
+    font-size: 100%;
 }
 
 /* Navbar Styling Start ****************************** */
